@@ -22,4 +22,13 @@ class GildedRoseTest {
         assertEquals(9, app.items[0].quality);
         assertEquals(9, app.items[0].sellIn);
     }
+
+    @Test
+    void qualityDegradesTwiceAsFastOnceTheSellByDateHasPassed() {
+        Item[] items = new Item[] { new Item("item", 0, 10) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(8, app.items[0].quality);
+        assertEquals(-1, app.items[0].sellIn);
+    }
 }
