@@ -6,6 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
+    private GildedRose gildedRose(Item[] item) {
+        return new GildedRose(item);
+    }
+
+    private Item[] withItems(Item... item) {
+        return item;
+    }
+
     @Test
     void foo() {
         GildedRose app = gildedRose(withItems(
@@ -110,11 +118,47 @@ class GildedRoseTest {
         assertEquals(2, app.items[0].sellIn);
     }
 
-    private GildedRose gildedRose(Item[] item) {
-        return new GildedRose(item);
+    @Test
+    void backstagePassesIncreaseInQuality() {
+        GildedRose app = gildedRose(withItems(
+                new Item("Backstage passes to a TAFKAL80ETC concert", 15, 10)
+        ));
+
+        app.updateQuality();
+
+        assertEquals(11, app.items[0].quality);
     }
 
-    private Item[] withItems(Item... item) {
-        return item;
+    @Test
+    void backstagePassesIncreaseInQualityByTwoIfSellInIsLowerThen10() {
+        GildedRose app = gildedRose(withItems(
+                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 10)
+        ));
+
+        app.updateQuality();
+
+        assertEquals(12, app.items[0].quality);
+    }
+
+    @Test
+    void backstagePassesIncreaseInQualityByThreeIfSellInIsLowerThen5() {
+        GildedRose app = gildedRose(withItems(
+                new Item("Backstage passes to a TAFKAL80ETC concert", 5, 10)
+        ));
+
+        app.updateQuality();
+
+        assertEquals(13, app.items[0].quality);
+    }
+
+    @Test
+    void backstagePassesDropsTo0AfterConcert() {
+        GildedRose app = gildedRose(withItems(
+                new Item("Backstage passes to a TAFKAL80ETC concert", 0, 10)
+        ));
+
+        app.updateQuality();
+
+        assertEquals(0, app.items[0].quality);
     }
 }
