@@ -14,6 +14,7 @@ class GildedRoseTest {
         assertEquals("foo", app.items[0].name);
     }
 
+    @Test
     void decrementQualityAndSellInAfterOneDay() {
         Item[] items = new Item[] { new Item("item", 10, 10) };
         GildedRose app = new GildedRose(items);
