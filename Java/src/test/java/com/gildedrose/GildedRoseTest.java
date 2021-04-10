@@ -33,11 +33,20 @@ class GildedRoseTest {
     }
 
     @Test
-    void  TestThatQualityIsNeverNegative() {
+    void TestThatQualityIsNeverNegative() {
         Item[] items = new Item[] { new Item("item", 0, 1) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals(0, app.items[0].quality);
         assertEquals(-1, app.items[0].sellIn);
+    }
+
+    @Test
+    void agedBrieIncreasesInQuality() {
+        Item[] items = new Item[] { new Item("Aged Brie", 10, 10) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(11, app.items[0].quality);
+        assertEquals(9, app.items[0].sellIn);
     }
 }
