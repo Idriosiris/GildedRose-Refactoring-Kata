@@ -110,7 +110,7 @@ class GildedRoseTest {
     @Test
     void sulfurasSellinDayNeverDecreases() {
         GildedRose app = gildedRose(withItems(
-                new SimpleItem("Sulfuras, Hand of Ragnaros", 2, 10)
+                new Sulfuras( 2, 10)
         ));
 
         app.updateQuality();
