@@ -8,15 +8,13 @@ public class Conjured extends Item {
     @Override
     public void updateQualityAndSellIn() {
         if (quality > 0) {
-            decreaseQuality();
-            decreaseQuality();
+            decreaseQuality(2);
         }
 
         sellIn = sellIn - 1;
 
         if (sellIn < 0 && quality > 0) {
-            decreaseQuality();
-            decreaseQuality();
+            decreaseQuality(2);
         }
     }
 }

@@ -8,13 +8,13 @@ public class SimpleItem extends Item {
 
     public void updateQualityAndSellIn() {
         if (quality > 0) {
-            decreaseQuality();
+            decreaseQuality(1);
         }
 
         sellIn = sellIn - 1;
 
         if (sellIn < 0 && quality > 0) {
-            decreaseQuality();
+            decreaseQuality(1);
         }
     }
 

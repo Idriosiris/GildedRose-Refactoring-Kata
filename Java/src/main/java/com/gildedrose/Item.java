@@ -11,8 +11,8 @@ public abstract class Item {
         this.quality = quality;
     }
 
-    void decreaseQuality() {
-        quality = quality - 1;
+    void decreaseQuality(int amount) {
+        quality = quality - amount;
     }
 
     void incrementQuality() {
