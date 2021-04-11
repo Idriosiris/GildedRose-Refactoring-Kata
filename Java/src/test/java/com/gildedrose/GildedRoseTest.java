@@ -121,7 +121,7 @@ class GildedRoseTest {
     @Test
     void backstagePassesIncreaseInQuality() {
         GildedRose app = gildedRose(withItems(
-                new SimpleItem("Backstage passes to a TAFKAL80ETC concert", 15, 10)
+                new BackstagePasses( 15, 10)
         ));
 
         app.updateQuality();
@@ -132,7 +132,7 @@ class GildedRoseTest {
     @Test
     void backstagePassesIncreaseInQualityByTwoIfSellInIsLowerThen10() {
         GildedRose app = gildedRose(withItems(
-                new SimpleItem("Backstage passes to a TAFKAL80ETC concert", 10, 10)
+                new BackstagePasses(10, 10)
         ));
 
         app.updateQuality();
@@ -143,7 +143,7 @@ class GildedRoseTest {
     @Test
     void backstagePassesIncreaseInQualityByThreeIfSellInIsLowerThen5() {
         GildedRose app = gildedRose(withItems(
-                new SimpleItem("Backstage passes to a TAFKAL80ETC concert", 5, 10)
+                new BackstagePasses(5, 10)
         ));
 
         app.updateQuality();
@@ -154,7 +154,7 @@ class GildedRoseTest {
     @Test
     void backstagePassesDropsTo0AfterConcert() {
         GildedRose app = gildedRose(withItems(
-                new SimpleItem("Backstage passes to a TAFKAL80ETC concert", 0, 10)
+                new BackstagePasses(0, 10)
         ));
 
         app.updateQuality();
