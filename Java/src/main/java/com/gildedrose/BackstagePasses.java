@@ -10,16 +10,12 @@ public class BackstagePasses extends Item {
         if (quality < 50) {
             incrementQuality();
 
-            if (sellIn < 11) {
-                if (quality < 50) {
-                    incrementQuality();
-                }
+            if (sellIn < 11 && quality < 50) {
+                incrementQuality();
             }
 
-            if (sellIn < 6) {
-                if (quality < 50) {
-                    incrementQuality();
-                }
+            if (sellIn < 6 && quality < 50) {
+                incrementQuality();
             }
         }
 
