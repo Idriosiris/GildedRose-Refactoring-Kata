@@ -76,7 +76,7 @@ class GildedRoseTest {
     @Test
     void agedBrieDoublesInQualityWhenSellinDayPasses() {
         GildedRose app = gildedRose(withItems(
-                new SimpleItem("Aged Brie", 0, 10)
+                new AgedBrie( 0, 10)
         ));
 
         app.updateQuality();
@@ -88,7 +88,7 @@ class GildedRoseTest {
     @Test
     void qualityOfAnItemIsNeverMoreThan50() {
         GildedRose app = gildedRose(withItems(
-                new SimpleItem("Aged Brie", 0, 50)
+                new AgedBrie( 0, 50)
         ));
 
         app.updateQuality();
@@ -99,7 +99,7 @@ class GildedRoseTest {
     @Test
     void sulfurasNeverDecreasesInQuality() {
         GildedRose app = gildedRose(withItems(
-                new SimpleItem("Sulfuras, Hand of Ragnaros", 2, 10)
+                new Sulfuras( 2, 10)
         ));
 
         app.updateQuality();
