@@ -1,28 +1,12 @@
 package com.gildedrose;
 
-public class SimpleItem {
-
-    public String name;
-
-    public int sellIn;
-
-    public int quality;
+public class SimpleItem extends Item {
 
     public SimpleItem(String name, int sellIn, int quality) {
-        this.name = name;
-        this.sellIn = sellIn;
-        this.quality = quality;
+        super(name, sellIn, quality);
     }
 
-    void decreaseQuality() {
-        quality = quality - 1;
-    }
-
-    void incrementQuality() {
-        quality = quality + 1;
-    }
-
-    void updateQualityAndSellIn() {
+    public void updateQualityAndSellIn() {
         if (!name.equals("Aged Brie")
                 && !name.equals("Backstage passes to a TAFKAL80ETC concert")) {
             if (quality > 0) {
@@ -73,8 +57,4 @@ public class SimpleItem {
         }
     }
 
-    @Override
-    public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
-    }
 }

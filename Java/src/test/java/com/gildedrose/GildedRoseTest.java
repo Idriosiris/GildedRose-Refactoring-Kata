@@ -22,7 +22,7 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals("foo", app.simpleItems[0].name);
+        assertEquals("foo", app.items[0].name);
     }
 
     @Test
@@ -33,8 +33,8 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(9, app.simpleItems[0].quality);
-        assertEquals(9, app.simpleItems[0].sellIn);
+        assertEquals(9, app.items[0].quality);
+        assertEquals(9, app.items[0].sellIn);
     }
 
     @Test
@@ -45,8 +45,8 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(8, app.simpleItems[0].quality);
-        assertEquals(-1, app.simpleItems[0].sellIn);
+        assertEquals(8, app.items[0].quality);
+        assertEquals(-1, app.items[0].sellIn);
     }
 
     @Test
@@ -57,8 +57,8 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(0, app.simpleItems[0].quality);
-        assertEquals(-1, app.simpleItems[0].sellIn);
+        assertEquals(0, app.items[0].quality);
+        assertEquals(-1, app.items[0].sellIn);
     }
 
     @Test
@@ -69,8 +69,8 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(11, app.simpleItems[0].quality);
-        assertEquals(9, app.simpleItems[0].sellIn);
+        assertEquals(11, app.items[0].quality);
+        assertEquals(9, app.items[0].sellIn);
     }
 
     @Test
@@ -81,8 +81,8 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(12, app.simpleItems[0].quality);
-        assertEquals(-1, app.simpleItems[0].sellIn);
+        assertEquals(12, app.items[0].quality);
+        assertEquals(-1, app.items[0].sellIn);
     }
 
     @Test
@@ -93,7 +93,7 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(50, app.simpleItems[0].quality);
+        assertEquals(50, app.items[0].quality);
     }
 
     @Test
@@ -104,7 +104,7 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(10, app.simpleItems[0].quality);
+        assertEquals(10, app.items[0].quality);
     }
 
     @Test
@@ -115,7 +115,7 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(2, app.simpleItems[0].sellIn);
+        assertEquals(2, app.items[0].sellIn);
     }
 
     @Test
@@ -126,7 +126,7 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(11, app.simpleItems[0].quality);
+        assertEquals(11, app.items[0].quality);
     }
 
     @Test
@@ -137,7 +137,7 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(12, app.simpleItems[0].quality);
+        assertEquals(12, app.items[0].quality);
     }
 
     @Test
@@ -148,7 +148,7 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(13, app.simpleItems[0].quality);
+        assertEquals(13, app.items[0].quality);
     }
 
     @Test
@@ -159,6 +159,6 @@ class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals(0, app.simpleItems[0].quality);
+        assertEquals(0, app.items[0].quality);
     }
 }
