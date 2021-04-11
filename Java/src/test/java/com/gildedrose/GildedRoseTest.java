@@ -6,12 +6,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
-    private GildedRose gildedRose(SimpleItem[] simpleItem) {
-        return new GildedRose(simpleItem);
+    private GildedRose gildedRose(Item[] item) {
+        return new GildedRose(item);
     }
 
-    private SimpleItem[] withItems(SimpleItem... simpleItem) {
-        return simpleItem;
+    private Item[] withItems(Item... item) {
+        return item;
     }
 
     @Test
@@ -64,7 +64,7 @@ class GildedRoseTest {
     @Test
     void agedBrieIncreasesInQuality() {
         GildedRose app = gildedRose(withItems(
-                new SimpleItem("Aged Brie", 10, 10)
+                new AgedBrie( 10, 10)
         ));
 
         app.updateQuality();
