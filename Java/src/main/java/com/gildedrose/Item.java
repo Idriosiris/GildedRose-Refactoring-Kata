@@ -19,10 +19,10 @@ public abstract class Item {
         quality = quality + 1;
     }
 
+    public abstract void updateQualityAndSellIn();
+
     @Override
     public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
-
-    public abstract void updateQualityAndSellIn();
 }
