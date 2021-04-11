@@ -9,15 +9,12 @@ public class AgedBrie extends Item {
     public void updateQualityAndSellIn() {
         if (quality < 50) {
             incrementQuality();
-
         }
 
         sellIn = sellIn - 1;
 
-        if (sellIn < 0) {
-            if (quality < 50) {
-                incrementQuality();
-            }
+        if (sellIn < 0 && quality < 50) {
+            incrementQuality();
         }
     }
 }
