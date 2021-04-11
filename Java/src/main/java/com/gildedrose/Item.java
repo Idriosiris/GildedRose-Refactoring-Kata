@@ -14,12 +14,12 @@ public class Item {
         this.quality = quality;
     }
 
-    int incrementQuality() {
-        return quality + 1;
+    void decreaseQuality() {
+        quality = quality - 1;
     }
 
-    int decrementQuality() {
-        return quality - 1;
+    void incrementQuality() {
+        quality = quality + 1;
     }
 
     @Override
