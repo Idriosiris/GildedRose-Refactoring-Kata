@@ -161,4 +161,16 @@ class GildedRoseTest {
 
         assertEquals(0, app.items[0].quality);
     }
+
+    void conjuredItemsDegradeTwiceAsFastAsSimpleItems() {
+        GildedRose app = gildedRose(withItems(
+                new SimpleItem("Simple",4, 10),
+                new Conjured(4, 10)
+        ));
+
+        app.updateQuality();
+
+        assertEquals(9, app.items[0].quality);
+        assertEquals(8, app.items[1].quality);
+    }
 }
