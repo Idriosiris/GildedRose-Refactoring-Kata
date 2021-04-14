@@ -6,7 +6,7 @@ public class Conjured extends Item {
     }
 
     @Override
-    public void updateQualityAndSellIn() {
+    public void update() {
         if (quality > 0) {
             decreaseQuality(2);
         }

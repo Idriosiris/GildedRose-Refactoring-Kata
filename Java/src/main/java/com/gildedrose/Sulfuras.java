@@ -6,7 +6,7 @@ public class Sulfuras extends Item {
     }
 
     @Override
-    public void updateQualityAndSellIn() {
+    public void update() {
 
     }
 }

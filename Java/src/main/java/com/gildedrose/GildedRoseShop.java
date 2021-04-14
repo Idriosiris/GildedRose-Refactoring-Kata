@@ -9,7 +9,7 @@ public class GildedRoseShop {
 
     public void update() {
         for (Item item : items) {
-            item.updateQualityAndSellIn();
+            item.update();
         }
     }
 
