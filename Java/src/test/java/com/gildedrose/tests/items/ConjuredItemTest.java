@@ -12,17 +12,17 @@ public class ConjuredItemTest {
     void conjuredItemsDegradeTwiceAsFastAsSimpleItems() {
         conjured = new Conjured(4, 10);
 
-        conjured.update();
+        Conjured updatedConjuredItem = conjured.update();
 
-        assertEquals(8, conjured.quality);
+        assertEquals(8, updatedConjuredItem.quality);
     }
 
     @Test
     void conjuredItemsDegradeTwiceAsFastAsSimpleItemsAlsoWhenSellInIs0() {
         conjured = new Conjured(0, 10);
 
-        conjured.update();
+        Conjured updatedConjuredItem = conjured.update();
 
-        assertEquals(6, conjured.quality);
+        assertEquals(6, updatedConjuredItem.quality);
     }
 }

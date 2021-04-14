@@ -17,6 +17,6 @@ public class Conjured extends Item {
             decreaseQuality(2);
         }
 
-        return null;
+        return new Conjured(sellIn, quality);
     }
 }
