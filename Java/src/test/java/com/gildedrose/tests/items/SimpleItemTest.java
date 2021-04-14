@@ -13,38 +13,38 @@ class SimpleItemTest {
     void foo() {
         simpleItem = new SimpleItem("foo", 0, 0);
 
-        simpleItem.update();
+        SimpleItem updatedSimpleItem = simpleItem.update();
 
-        assertEquals("foo", simpleItem.name);
+        assertEquals("foo", updatedSimpleItem.name);
     }
 
     @Test
     void decrementQualityAndSellInAfterOneDay() {
         SimpleItem simpleItem = new SimpleItem("item", 10, 10);
 
-        simpleItem.update();
+        SimpleItem updatedSimpleItem = simpleItem.update();
 
-        assertEquals(9, simpleItem.quality);
-        assertEquals(9, simpleItem.sellIn);
+        assertEquals(9, updatedSimpleItem.quality);
+        assertEquals(9, updatedSimpleItem.sellIn);
     }
 
     @Test
     void qualityDegradesTwiceAsFastOnceTheSellByDateHasPassed() {
         simpleItem = new SimpleItem("item", 0, 10);
 
-        simpleItem.update();
+        SimpleItem updatedSimpleItem = simpleItem.update();
 
-        assertEquals(8, simpleItem.quality);
-        assertEquals(-1, simpleItem.sellIn);
+        assertEquals(8, updatedSimpleItem.quality);
+        assertEquals(-1, updatedSimpleItem.sellIn);
     }
 
     @Test
     void TestThatQualityIsNeverNegative() {
         SimpleItem simpleItem = new SimpleItem("item", 0, 1);
 
-        simpleItem.update();
+        SimpleItem updatedSimpleItem = simpleItem.update();
 
-        assertEquals(0, simpleItem.quality);
-        assertEquals(-1, simpleItem.sellIn);
+        assertEquals(0, updatedSimpleItem.quality);
+        assertEquals(-1, updatedSimpleItem.sellIn);
     }
 }

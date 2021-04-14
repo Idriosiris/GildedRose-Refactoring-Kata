@@ -17,7 +17,7 @@ public class SimpleItem extends Item {
             decreaseQuality(1);
         }
 
-        return null;
+        return new SimpleItem(name, sellIn, quality);
     }
 
 }
