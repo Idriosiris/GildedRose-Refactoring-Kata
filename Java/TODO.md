@@ -12,3 +12,9 @@
 - Slight unknowns around Sulfuras
 - Improve assertions using matchers
 - Improve data creation
+
+#### Further ideas from shop owner and shop customers 
+
+- Any item can become Conjured
+- New items can be added into the gilded rose shop
+- Every day there is a 10% chance for items to contract fungi infections with all of them decreasing in quality twice as fast 
