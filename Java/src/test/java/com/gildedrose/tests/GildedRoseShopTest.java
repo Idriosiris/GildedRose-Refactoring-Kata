@@ -1,6 +1,10 @@
 package com.gildedrose.tests;
 
 import com.gildedrose.*;
+import com.gildedrose.items.AgedBrie;
+import com.gildedrose.items.BackstagePasses;
+import com.gildedrose.items.Conjured;
+import com.gildedrose.items.Item;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -27,12 +31,13 @@ public class GildedRoseShopTest {
 
         gildedRoseShop.update();
 
-        assertNotEquals(5 , gildedRoseShop.items[0].quality);
-        assertNotEquals(10, gildedRoseShop.items[1].quality);
-        assertNotEquals(5 , gildedRoseShop.items[2].quality);
+        assertNotEquals(5 , gildedRoseShop.getItem(0).quality);
+        assertNotEquals(10, gildedRoseShop.getItem(1).quality);
+        assertNotEquals(5 , gildedRoseShop.getItem(2).quality);
 
-        assertNotEquals(21, gildedRoseShop.items[0].quality);
-        assertNotEquals(12, gildedRoseShop.items[1].quality);
-        assertNotEquals(7 , gildedRoseShop.items[2].quality);
+        assertNotEquals(21, gildedRoseShop.getItem(0).quality);
+        assertNotEquals(12, gildedRoseShop.getItem(1).quality);
+        assertNotEquals(7 , gildedRoseShop.getItem(2).quality);
     }
+
 }

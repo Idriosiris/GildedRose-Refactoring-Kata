@@ -1,8 +1,8 @@
 package com.gildedrose.tests;
 
 import com.gildedrose.GildedRoseShop;
-import com.gildedrose.Item;
-import com.gildedrose.SimpleItem;
+import com.gildedrose.items.Item;
+import com.gildedrose.items.SimpleItem;
 
 public class TexttestFixture {
     public static void main(String[] args) {

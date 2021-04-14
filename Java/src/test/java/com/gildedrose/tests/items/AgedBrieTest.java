@@ -1,6 +1,6 @@
 package com.gildedrose.tests.items;
 
-import com.gildedrose.AgedBrie;
+import com.gildedrose.items.AgedBrie;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

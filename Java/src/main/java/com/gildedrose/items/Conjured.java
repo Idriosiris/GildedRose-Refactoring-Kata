@@ -1,4 +1,4 @@
-package com.gildedrose;
+package com.gildedrose.items;
 
 public class Conjured extends Item {
     public Conjured(int sellIn, int quality) {

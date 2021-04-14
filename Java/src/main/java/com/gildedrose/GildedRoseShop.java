@@ -1,5 +1,7 @@
 package com.gildedrose;
 
+import com.gildedrose.items.Item;
+
 public class GildedRoseShop {
     public Item[] items;
 
@@ -13,4 +15,7 @@ public class GildedRoseShop {
         }
     }
 
+    public Item getItem(int position) {
+        return items[position];
+    }
 }

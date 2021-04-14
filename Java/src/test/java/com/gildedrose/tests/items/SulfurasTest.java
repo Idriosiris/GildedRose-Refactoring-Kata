@@ -1,6 +1,6 @@
 package com.gildedrose.tests.items;
 
-import com.gildedrose.Sulfuras;
+import com.gildedrose.items.Sulfuras;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
