@@ -6,7 +6,7 @@ public class AgedBrie extends Item {
     }
 
     @Override
-    public void update() {
+    public AgedBrie update() {
         if (quality < 50) {
             incrementQuality();
         }
@@ -16,5 +16,7 @@ public class AgedBrie extends Item {
         if (sellIn < 0 && quality < 50) {
             incrementQuality();
         }
+
+        return new AgedBrie(sellIn, quality);
     }
 }

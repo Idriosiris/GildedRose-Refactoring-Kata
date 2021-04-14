@@ -12,28 +12,28 @@ public class AgedBrieTest {
     void agedBrieIncreasesInQuality() {
         agedBrie = new AgedBrie(10, 10);
 
-        agedBrie.update();
+        AgedBrie updatedAgedBrie = agedBrie.update();
 
-        assertEquals(11, agedBrie.quality);
-        assertEquals(9,  agedBrie.sellIn);
+        assertEquals(11, updatedAgedBrie.quality);
+        assertEquals(9,  updatedAgedBrie.sellIn);
     }
 
     @Test
     void agedBrieDoublesInQualityWhenSellinDayPasses() {
         agedBrie = new AgedBrie(0, 10);
 
-        agedBrie.update();
+        AgedBrie updatedAgedBrie = agedBrie.update();
 
-        assertEquals(12, agedBrie.quality);
-        assertEquals(-1, agedBrie.sellIn);
+        assertEquals(12, updatedAgedBrie.quality);
+        assertEquals(-1, updatedAgedBrie.sellIn);
     }
 
     @Test
     void qualityOfAnItemIsNeverMoreThan50() {
         agedBrie = new AgedBrie(0, 50);
 
-        agedBrie.update();
+        AgedBrie updatedAgedBrie = agedBrie.update();
 
-        assertEquals(50, agedBrie.quality);
+        assertEquals(50, updatedAgedBrie.quality);
     }
 }

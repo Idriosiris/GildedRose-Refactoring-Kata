@@ -19,7 +19,7 @@ public abstract class Item {
         quality = quality + 1;
     }
 
-    public abstract void update();
+    public abstract Item update();
 
     @Override
     public String toString() {

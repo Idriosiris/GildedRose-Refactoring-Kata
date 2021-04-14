@@ -6,7 +6,7 @@ public class SimpleItem extends Item {
         super(name, sellIn, quality);
     }
 
-    public void update() {
+    public SimpleItem update() {
         if (quality > 0) {
             decreaseQuality(1);
         }
@@ -16,6 +16,8 @@ public class SimpleItem extends Item {
         if (sellIn < 0 && quality > 0) {
             decreaseQuality(1);
         }
+
+        return null;
     }
 
 }
