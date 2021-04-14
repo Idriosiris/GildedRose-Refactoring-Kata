@@ -3,7 +3,7 @@ package com.gildedrose;
 import com.gildedrose.items.Item;
 
 public class GildedRoseShop {
-    private Item[] items;
+    private final Item[] items;
 
     public GildedRoseShop(Item[] items) {
         this.items = items;
