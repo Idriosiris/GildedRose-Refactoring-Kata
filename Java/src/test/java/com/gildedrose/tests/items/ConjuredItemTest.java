@@ -1,7 +1,6 @@
 package com.gildedrose.tests.items;
 
 import com.gildedrose.Conjured;
-import com.gildedrose.GildedRoseShop;
 import com.gildedrose.SimpleItem;
 import org.junit.jupiter.api.Test;
 
