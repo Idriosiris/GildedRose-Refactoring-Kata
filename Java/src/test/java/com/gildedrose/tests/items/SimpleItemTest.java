@@ -1,66 +1,50 @@
 package com.gildedrose.tests.items;
 
-import com.gildedrose.*;
+import com.gildedrose.SimpleItem;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SimpleItemTest {
 
-    private GildedRoseShop app;
-
-    private GildedRoseShop gildedRose(Item[] item) {
-        return new GildedRoseShop(item);
-    }
-
-    private Item[] withItems(Item... item) {
-        return item;
-    }
+    private SimpleItem simpleItem;
 
     @Test
     void foo() {
-        app = gildedRose(withItems(
-                new SimpleItem("foo", 0, 0))
-        );
+        simpleItem = new SimpleItem("foo", 0, 0);
 
-        app.update();
+        simpleItem.update();
 
-        assertEquals("foo", app.items[0].name);
+        assertEquals("foo", simpleItem.name);
     }
 
     @Test
     void decrementQualityAndSellInAfterOneDay() {
-        app = gildedRose(withItems(
-                new SimpleItem("item", 10, 10)
-        ));
+        SimpleItem simpleItem = new SimpleItem("item", 10, 10);
 
-        app.update();
+        simpleItem.update();
 
-        assertEquals(9, app.items[0].quality);
-        assertEquals(9, app.items[0].sellIn);
+        assertEquals(9, simpleItem.quality);
+        assertEquals(9, simpleItem.sellIn);
     }
 
     @Test
     void qualityDegradesTwiceAsFastOnceTheSellByDateHasPassed() {
-        app = gildedRose(withItems(
-                new SimpleItem("item", 0, 10)
-        ));
+        simpleItem = new SimpleItem("item", 0, 10);
 
-        app.update();
+        simpleItem.update();
 
-        assertEquals(8, app.items[0].quality);
-        assertEquals(-1, app.items[0].sellIn);
+        assertEquals(8, simpleItem.quality);
+        assertEquals(-1, simpleItem.sellIn);
     }
 
     @Test
     void TestThatQualityIsNeverNegative() {
-        app = gildedRose(withItems(
-                new SimpleItem("item", 0, 1)
-        ));
+        SimpleItem simpleItem = new SimpleItem("item", 0, 1);
 
-        app.update();
+        simpleItem.update();
 
-        assertEquals(0, app.items[0].quality);
-        assertEquals(-1, app.items[0].sellIn);
+        assertEquals(0, simpleItem.quality);
+        assertEquals(-1, simpleItem.sellIn);
     }
 }
