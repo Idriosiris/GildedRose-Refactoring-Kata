@@ -15,7 +15,7 @@ public class GildedRoseShop {
         }
     }
 
-    public Item getItemWithShelfPosition(int position) {
+    public Item getItemFromShelfPosition(int position) {
         return items[position-1];
     }
 }
