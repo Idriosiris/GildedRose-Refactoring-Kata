@@ -9,6 +9,7 @@
 #### TODO
 
 - Improve encapsulation of items[0] in the gilded rose logic
+- GildedRoseShop should not be stateful but rather a modified version of the GildedRoseShop should be returned every time.
 - Improve test and mutation coverage
 - Slight unknowns around Sulfuras
 - Improve assertions using matchers
