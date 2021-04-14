@@ -5,3 +5,4 @@
 4. Slight unknowns around Sulfuras
 5. Improve assertions using matchers
 6. Improve data creation 
+7. SimpleItem logic should not be tested inside conjured item logic
