@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
+    private GildedRose app;
+
     private GildedRose gildedRose(Item[] item) {
         return new GildedRose(item);
     }
@@ -17,7 +19,7 @@ class GildedRoseTest {
 
     @Test
     void foo() {
-        GildedRose app = gildedRose(withItems(
+        app = gildedRose(withItems(
                 new SimpleItem("foo", 0, 0))
         );
 
@@ -28,7 +30,7 @@ class GildedRoseTest {
 
     @Test
     void decrementQualityAndSellInAfterOneDay() {
-        GildedRose app = gildedRose(withItems(
+        app = gildedRose(withItems(
                 new SimpleItem("item", 10, 10)
         ));
 
@@ -40,7 +42,7 @@ class GildedRoseTest {
 
     @Test
     void qualityDegradesTwiceAsFastOnceTheSellByDateHasPassed() {
-        GildedRose app = gildedRose(withItems(
+        app = gildedRose(withItems(
                 new SimpleItem("item", 0, 10)
         ));
 
@@ -52,7 +54,7 @@ class GildedRoseTest {
 
     @Test
     void TestThatQualityIsNeverNegative() {
-        GildedRose app = gildedRose(withItems(
+        app = gildedRose(withItems(
                 new SimpleItem("item", 0, 1)
         ));
 
@@ -64,8 +66,8 @@ class GildedRoseTest {
 
     @Test
     void agedBrieIncreasesInQuality() {
-        GildedRose app = gildedRose(withItems(
-                new AgedBrie( 10, 10)
+        app = gildedRose(withItems(
+                new AgedBrie(10, 10)
         ));
 
         app.updateQuality();
@@ -76,8 +78,8 @@ class GildedRoseTest {
 
     @Test
     void agedBrieDoublesInQualityWhenSellinDayPasses() {
-        GildedRose app = gildedRose(withItems(
-                new AgedBrie( 0, 10)
+        app = gildedRose(withItems(
+                new AgedBrie(0, 10)
         ));
 
         app.updateQuality();
@@ -88,8 +90,8 @@ class GildedRoseTest {
 
     @Test
     void qualityOfAnItemIsNeverMoreThan50() {
-        GildedRose app = gildedRose(withItems(
-                new AgedBrie( 0, 50)
+        app = gildedRose(withItems(
+                new AgedBrie(0, 50)
         ));
 
         app.updateQuality();
@@ -99,8 +101,8 @@ class GildedRoseTest {
 
     @Test
     void sulfurasNeverDecreasesInQuality() {
-        GildedRose app = gildedRose(withItems(
-                new Sulfuras( 2, 10)
+        app = gildedRose(withItems(
+                new Sulfuras(2, 10)
         ));
 
         app.updateQuality();
@@ -110,8 +112,8 @@ class GildedRoseTest {
 
     @Test
     void sulfurasSellinDayNeverDecreases() {
-        GildedRose app = gildedRose(withItems(
-                new Sulfuras( 2, 10)
+        app = gildedRose(withItems(
+                new Sulfuras(2, 10)
         ));
 
         app.updateQuality();
@@ -121,8 +123,8 @@ class GildedRoseTest {
 
     @Test
     void backstagePassesIncreaseInQuality() {
-        GildedRose app = gildedRose(withItems(
-                new BackstagePasses( 15, 10)
+        app = gildedRose(withItems(
+                new BackstagePasses(15, 10)
         ));
 
         app.updateQuality();
@@ -132,7 +134,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassesIncreaseInQualityByTwoIfSellInIsLowerThen10() {
-        GildedRose app = gildedRose(withItems(
+        app = gildedRose(withItems(
                 new BackstagePasses(10, 10)
         ));
 
@@ -143,7 +145,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassesIncreaseInQualityByThreeIfSellInIsLowerThen5() {
-        GildedRose app = gildedRose(withItems(
+        app = gildedRose(withItems(
                 new BackstagePasses(5, 10)
         ));
 
@@ -154,7 +156,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassesDropsTo0AfterConcert() {
-        GildedRose app = gildedRose(withItems(
+        app = gildedRose(withItems(
                 new BackstagePasses(0, 10)
         ));
 
@@ -163,9 +165,10 @@ class GildedRoseTest {
         assertEquals(0, app.items[0].quality);
     }
 
+    @Test
     void conjuredItemsDegradeTwiceAsFastAsSimpleItems() {
-        GildedRose app = gildedRose(withItems(
-                new SimpleItem("Simple",4, 10),
+        app = gildedRose(withItems(
+                new SimpleItem("Simple", 4, 10),
                 new Conjured(4, 10)
         ));
 
@@ -175,9 +178,10 @@ class GildedRoseTest {
         assertEquals(8, app.items[1].quality);
     }
 
+    @Test
     void conjuredItemsDegradeTwiceAsFastAsSimpleItemsAlsoWhenSellInIs0() {
-        GildedRose app = gildedRose(withItems(
-                new SimpleItem("Simple",0, 10),
+        app = gildedRose(withItems(
+                new SimpleItem("Simple", 0, 10),
                 new Conjured(0, 10)
         ));
 
