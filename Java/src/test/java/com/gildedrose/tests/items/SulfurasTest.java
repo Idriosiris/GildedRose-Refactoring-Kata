@@ -1,7 +1,5 @@
 package com.gildedrose.tests.items;
 
-import com.gildedrose.GildedRoseShop;
-import com.gildedrose.Item;
 import com.gildedrose.Sulfuras;
 import org.junit.jupiter.api.Test;
 
