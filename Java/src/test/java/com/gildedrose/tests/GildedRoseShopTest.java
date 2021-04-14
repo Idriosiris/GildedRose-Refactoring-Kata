@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class GildedRoseShopTest {
 
+    private GildedRoseShop gildedRoseShop;
+
     private GildedRoseShop gildedRose(Item[] item) {
         return new GildedRoseShop(item);
     }
@@ -17,7 +19,7 @@ public class GildedRoseShopTest {
 
     @Test
     void gildedRoseShopUpdateUpdatesAllItemsSellIn() {
-        GildedRoseShop gildedRoseShop = gildedRose(withItems(
+        gildedRoseShop = gildedRose(withItems(
                 new Conjured( 5, 21),
                 new AgedBrie(10, 12),
                 new BackstagePasses(5, 7))
