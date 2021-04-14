@@ -1,6 +1,6 @@
 package com.gildedrose.tests.items;
 
-import com.gildedrose.GildedRose;
+import com.gildedrose.GildedRoseShop;
 import com.gildedrose.Item;
 import com.gildedrose.Sulfuras;
 import org.junit.jupiter.api.Test;
@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SulfurasTest {
-    private GildedRose app;
+    private GildedRoseShop app;
 
-    private GildedRose gildedRose(Item[] item) {
-        return new GildedRose(item);
+    private GildedRoseShop gildedRose(Item[] item) {
+        return new GildedRoseShop(item);
     }
 
     private Item[] withItems(Item... item) {
@@ -24,7 +24,7 @@ public class SulfurasTest {
                 new Sulfuras(2, 10)
         ));
 
-        app.updateQuality();
+        app.update();
 
         assertEquals(10, app.items[0].quality);
     }
@@ -35,7 +35,7 @@ public class SulfurasTest {
                 new Sulfuras(2, 10)
         ));
 
-        app.updateQuality();
+        app.update();
 
         assertEquals(2, app.items[0].sellIn);
     }

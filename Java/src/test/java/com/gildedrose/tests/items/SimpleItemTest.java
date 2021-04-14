@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SimpleItemTest {
 
-    private GildedRose app;
+    private GildedRoseShop app;
 
-    private GildedRose gildedRose(Item[] item) {
-        return new GildedRose(item);
+    private GildedRoseShop gildedRose(Item[] item) {
+        return new GildedRoseShop(item);
     }
 
     private Item[] withItems(Item... item) {
@@ -23,7 +23,7 @@ class SimpleItemTest {
                 new SimpleItem("foo", 0, 0))
         );
 
-        app.updateQuality();
+        app.update();
 
         assertEquals("foo", app.items[0].name);
     }
@@ -34,7 +34,7 @@ class SimpleItemTest {
                 new SimpleItem("item", 10, 10)
         ));
 
-        app.updateQuality();
+        app.update();
 
         assertEquals(9, app.items[0].quality);
         assertEquals(9, app.items[0].sellIn);
@@ -46,7 +46,7 @@ class SimpleItemTest {
                 new SimpleItem("item", 0, 10)
         ));
 
-        app.updateQuality();
+        app.update();
 
         assertEquals(8, app.items[0].quality);
         assertEquals(-1, app.items[0].sellIn);
@@ -58,7 +58,7 @@ class SimpleItemTest {
                 new SimpleItem("item", 0, 1)
         ));
 
-        app.updateQuality();
+        app.update();
 
         assertEquals(0, app.items[0].quality);
         assertEquals(-1, app.items[0].sellIn);

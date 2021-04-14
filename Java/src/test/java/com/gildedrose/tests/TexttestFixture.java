@@ -1,6 +1,6 @@
 package com.gildedrose.tests;
 
-import com.gildedrose.GildedRose;
+import com.gildedrose.GildedRoseShop;
 import com.gildedrose.Item;
 import com.gildedrose.SimpleItem;
 
@@ -20,7 +20,7 @@ public class TexttestFixture {
                 // this conjured item does not work properly yet
                 new SimpleItem("Conjured Mana Cake", 3, 6) };
 
-        GildedRose app = new GildedRose(simpleItems);
+        GildedRoseShop app = new GildedRoseShop(simpleItems);
 
         int days = 2;
         if (args.length > 0) {
@@ -34,7 +34,7 @@ public class TexttestFixture {
                 System.out.println(item);
             }
             System.out.println();
-            app.updateQuality();
+            app.update();
         }
     }
 

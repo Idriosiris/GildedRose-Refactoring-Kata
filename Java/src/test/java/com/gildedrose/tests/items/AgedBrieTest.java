@@ -1,17 +1,17 @@
 package com.gildedrose.tests.items;
 
 import com.gildedrose.AgedBrie;
-import com.gildedrose.GildedRose;
+import com.gildedrose.GildedRoseShop;
 import com.gildedrose.Item;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AgedBrieTest {
-    private GildedRose app;
+    private GildedRoseShop app;
 
-    private GildedRose gildedRose(Item[] item) {
-        return new GildedRose(item);
+    private GildedRoseShop gildedRose(Item[] item) {
+        return new GildedRoseShop(item);
     }
 
     private Item[] withItems(Item... item) {
@@ -24,7 +24,7 @@ public class AgedBrieTest {
                 new AgedBrie(10, 10)
         ));
 
-        app.updateQuality();
+        app.update();
 
         assertEquals(11, app.items[0].quality);
         assertEquals(9, app.items[0].sellIn);
@@ -36,7 +36,7 @@ public class AgedBrieTest {
                 new AgedBrie(0, 10)
         ));
 
-        app.updateQuality();
+        app.update();
 
         assertEquals(12, app.items[0].quality);
         assertEquals(-1, app.items[0].sellIn);
@@ -48,7 +48,7 @@ public class AgedBrieTest {
                 new AgedBrie(0, 50)
         ));
 
-        app.updateQuality();
+        app.update();
 
         assertEquals(50, app.items[0].quality);
     }
