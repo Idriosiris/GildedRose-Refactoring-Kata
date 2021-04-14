@@ -9,6 +9,7 @@
 
 #### TODO
 
+- Improve test and mutation coverage 
 - Slight unknowns around Sulfuras
 - Improve assertions using matchers
 - Improve data creation
