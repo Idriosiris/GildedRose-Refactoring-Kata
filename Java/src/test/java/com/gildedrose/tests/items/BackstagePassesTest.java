@@ -1,4 +1,4 @@
-package com.gildedrose.tests;
+package com.gildedrose.tests.items;
 
 import com.gildedrose.BackstagePasses;
 import com.gildedrose.GildedRose;

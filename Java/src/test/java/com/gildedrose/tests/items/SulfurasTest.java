@@ -1,4 +1,4 @@
-package com.gildedrose.tests;
+package com.gildedrose.tests.items;
 
 import com.gildedrose.GildedRose;
 import com.gildedrose.Item;
