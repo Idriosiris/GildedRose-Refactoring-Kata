@@ -7,6 +7,6 @@ public class Sulfuras extends Item {
 
     @Override
     public Sulfuras update() {
-        return null;
+        return new Sulfuras(sellIn, quality);
     }
 }

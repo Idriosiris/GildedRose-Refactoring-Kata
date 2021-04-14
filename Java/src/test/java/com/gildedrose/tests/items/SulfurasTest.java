@@ -12,17 +12,17 @@ public class SulfurasTest {
     void sulfurasNeverDecreasesInQuality() {
         sulfuras = new Sulfuras(2, 10);
 
-        sulfuras.update();
+        Sulfuras updatedSulfuras = sulfuras.update();
 
-        assertEquals(10, sulfuras.quality);
+        assertEquals(10, updatedSulfuras.quality);
     }
 
     @Test
     void sulfurasSellinDayNeverDecreases() {
         sulfuras = new Sulfuras(2, 10);
 
-        sulfuras.update();
+        Sulfuras updatedSulfuras = sulfuras.update();
 
-        assertEquals(2, sulfuras.sellIn);
+        assertEquals(2, updatedSulfuras.sellIn);
     }
 }
