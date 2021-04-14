@@ -14,7 +14,7 @@ public class BackstagePassesTest {
 
         BackstagePasses updatedBackStagePass = backstagePasses.update();
 
-        assertEquals(11, updatedBackStagePass.quality);
+        assertEquals(11, updatedBackStagePass.quality());
     }
 
     @Test
@@ -23,7 +23,7 @@ public class BackstagePassesTest {
 
         BackstagePasses updatedBackStagePass = backstagePasses.update();
 
-        assertEquals(12, updatedBackStagePass.quality);
+        assertEquals(12, updatedBackStagePass.quality());
     }
 
     @Test
@@ -32,7 +32,7 @@ public class BackstagePassesTest {
 
         BackstagePasses updatedBackStagePass = backstagePasses.update();
 
-        assertEquals(13, updatedBackStagePass.quality);
+        assertEquals(13, updatedBackStagePass.quality());
     }
 
     @Test
@@ -41,6 +41,6 @@ public class BackstagePassesTest {
 
         BackstagePasses updatedBackStagePass = backstagePasses.update();
 
-        assertEquals(0, updatedBackStagePass.quality);
+        assertEquals(0, updatedBackStagePass.quality());
     }
 }

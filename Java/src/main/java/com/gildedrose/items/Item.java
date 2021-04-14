@@ -19,12 +19,12 @@ public abstract class Item {
         quality = quality + 1;
     }
 
-    public int quality(Item item) {
-        return item.quality;
+    public int quality() {
+        return quality;
     }
 
-    public int sellIn(Item item) {
-        return item.sellIn;
+    public int sellIn() {
+        return sellIn;
     }
 
     public abstract Item update();

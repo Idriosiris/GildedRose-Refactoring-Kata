@@ -14,7 +14,7 @@ public class ConjuredItemTest {
 
         Conjured updatedConjuredItem = conjured.update();
 
-        assertEquals(8, updatedConjuredItem.quality);
+        assertEquals(8, updatedConjuredItem.quality());
     }
 
     @Test
@@ -23,6 +23,6 @@ public class ConjuredItemTest {
 
         Conjured updatedConjuredItem = conjured.update();
 
-        assertEquals(6, updatedConjuredItem.quality);
+        assertEquals(6, updatedConjuredItem.quality());
     }
 }

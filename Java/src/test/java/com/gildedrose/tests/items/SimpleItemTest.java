@@ -24,8 +24,8 @@ class SimpleItemTest {
 
         SimpleItem updatedSimpleItem = simpleItem.update();
 
-        assertEquals(9, updatedSimpleItem.quality);
-        assertEquals(9, updatedSimpleItem.sellIn);
+        assertEquals(9, updatedSimpleItem.quality());
+        assertEquals(9, updatedSimpleItem.sellIn());
     }
 
     @Test
@@ -34,8 +34,8 @@ class SimpleItemTest {
 
         SimpleItem updatedSimpleItem = simpleItem.update();
 
-        assertEquals(8, updatedSimpleItem.quality);
-        assertEquals(-1, updatedSimpleItem.sellIn);
+        assertEquals(8, updatedSimpleItem.quality());
+        assertEquals(-1, updatedSimpleItem.sellIn());
     }
 
     @Test
@@ -44,7 +44,7 @@ class SimpleItemTest {
 
         SimpleItem updatedSimpleItem = simpleItem.update();
 
-        assertEquals(0, updatedSimpleItem.quality);
-        assertEquals(-1, updatedSimpleItem.sellIn);
+        assertEquals(0, updatedSimpleItem.quality());
+        assertEquals(-1, updatedSimpleItem.sellIn());
     }
 }

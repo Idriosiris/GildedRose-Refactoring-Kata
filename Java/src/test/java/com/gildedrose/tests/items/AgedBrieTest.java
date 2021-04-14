@@ -14,8 +14,8 @@ public class AgedBrieTest {
 
         AgedBrie updatedAgedBrie = agedBrie.update();
 
-        assertEquals(11, agedBrie.quality(updatedAgedBrie));
-        assertEquals(9 , agedBrie.sellIn(updatedAgedBrie));
+        assertEquals(11, agedBrie.quality());
+        assertEquals(9 , agedBrie.sellIn());
     }
 
     @Test
@@ -24,8 +24,8 @@ public class AgedBrieTest {
 
         AgedBrie updatedAgedBrie = agedBrie.update();
 
-        assertEquals(12, agedBrie.quality(updatedAgedBrie));
-        assertEquals(-1, agedBrie.sellIn(updatedAgedBrie));
+        assertEquals(12, agedBrie.quality());
+        assertEquals(-1, agedBrie.sellIn());
     }
 
     @Test
@@ -34,6 +34,6 @@ public class AgedBrieTest {
 
         AgedBrie updatedAgedBrie = agedBrie.update();
 
-        assertEquals(50, agedBrie.quality(updatedAgedBrie));
+        assertEquals(50, agedBrie.quality());
     }
 }

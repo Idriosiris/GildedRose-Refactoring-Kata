@@ -14,15 +14,15 @@ public class SulfurasTest {
 
         Sulfuras updatedSulfuras = sulfuras.update();
 
-        assertEquals(10, updatedSulfuras.quality);
+        assertEquals(10, updatedSulfuras.quality());
     }
 
     @Test
-    void sulfurasSellinDayNeverDecreases() {
+    void sulfurasSellInDayNeverDecreases() {
         sulfuras = new Sulfuras(2, 10);
 
         Sulfuras updatedSulfuras = sulfuras.update();
 
-        assertEquals(2, updatedSulfuras.sellIn);
+        assertEquals(2, updatedSulfuras.sellIn());
     }
 }
