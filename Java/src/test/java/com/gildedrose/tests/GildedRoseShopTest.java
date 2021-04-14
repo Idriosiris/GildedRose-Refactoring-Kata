@@ -31,13 +31,13 @@ public class GildedRoseShopTest {
 
         gildedRoseShop.update();
 
-        assertNotEquals(5 , gildedRoseShop.getItem(0).quality);
-        assertNotEquals(10, gildedRoseShop.getItem(1).quality);
-        assertNotEquals(5 , gildedRoseShop.getItem(2).quality);
+        assertNotEquals(5 , gildedRoseShop.getItemWithShelfPosition(1).quality);
+        assertNotEquals(10, gildedRoseShop.getItemWithShelfPosition(2).quality);
+        assertNotEquals(5 , gildedRoseShop.getItemWithShelfPosition(3).quality);
 
-        assertNotEquals(21, gildedRoseShop.getItem(0).quality);
-        assertNotEquals(12, gildedRoseShop.getItem(1).quality);
-        assertNotEquals(7 , gildedRoseShop.getItem(2).quality);
+        assertNotEquals(21, gildedRoseShop.getItemWithShelfPosition(1).quality);
+        assertNotEquals(12, gildedRoseShop.getItemWithShelfPosition(2).quality);
+        assertNotEquals(7 , gildedRoseShop.getItemWithShelfPosition(3).quality);
     }
 
 }
