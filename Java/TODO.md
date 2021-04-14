@@ -3,3 +3,5 @@
 2. Improve encapsulation of items[0] in the gilded rose logic 
 3. Remove duplication on the creation of GildedRose in tests
 4. Slight unknowns around Sulfuras
+5. Improve assertions using matchers
+6. Improve data creation 
