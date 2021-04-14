@@ -8,35 +8,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SulfurasTest {
-    private GildedRoseShop app;
-
-    private GildedRoseShop gildedRose(Item[] item) {
-        return new GildedRoseShop(item);
-    }
-
-    private Item[] withItems(Item... item) {
-        return item;
-    }
+    private Sulfuras sulfuras;
 
     @Test
     void sulfurasNeverDecreasesInQuality() {
-        app = gildedRose(withItems(
-                new Sulfuras(2, 10)
-        ));
+        sulfuras = new Sulfuras(2, 10);
 
-        app.update();
+        sulfuras.update();
 
-        assertEquals(10, app.items[0].quality);
+        assertEquals(10, sulfuras.quality);
     }
 
     @Test
     void sulfurasSellinDayNeverDecreases() {
-        app = gildedRose(withItems(
-                new Sulfuras(2, 10)
-        ));
+        sulfuras = new Sulfuras(2, 10);
 
-        app.update();
+        sulfuras.update();
 
-        assertEquals(2, app.items[0].sellIn);
+        assertEquals(2, sulfuras.sellIn);
     }
 }
