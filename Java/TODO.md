@@ -9,7 +9,7 @@
 
 #### TODO
 
+- SimpleItem logic should not be tested inside conjured item logic
 - Slight unknowns around Sulfuras
 - Improve assertions using matchers
-- Improve data creation 
-- SimpleItem logic should not be tested inside conjured item logic
+- Improve data creation
