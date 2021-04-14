@@ -12,35 +12,35 @@ public class BackstagePassesTest {
     void backstagePassesIncreaseInQuality() {
         backstagePasses = new BackstagePasses(15, 10);
 
-        backstagePasses.update();
+        BackstagePasses updatedBackStagePass = backstagePasses.update();
 
-        assertEquals(11, backstagePasses.quality);
+        assertEquals(11, updatedBackStagePass.quality);
     }
 
     @Test
     void backstagePassesIncreaseInQualityByTwoIfSellInIsLowerThen10() {
         backstagePasses = new BackstagePasses(10, 10);
 
-        backstagePasses.update();
+        BackstagePasses updatedBackStagePass = backstagePasses.update();
 
-        assertEquals(12, backstagePasses.quality);
+        assertEquals(12, updatedBackStagePass.quality);
     }
 
     @Test
     void backstagePassesIncreaseInQualityByThreeIfSellInIsLowerThen5() {
         backstagePasses = new BackstagePasses(5, 10);
 
-        backstagePasses.update();
+        BackstagePasses updatedBackStagePass = backstagePasses.update();
 
-        assertEquals(13, backstagePasses.quality);
+        assertEquals(13, updatedBackStagePass.quality);
     }
 
     @Test
     void backstagePassesDropsTo0AfterConcert() {
         backstagePasses = new BackstagePasses(0, 10);
 
-        backstagePasses.update();
+        BackstagePasses updatedBackStagePass = backstagePasses.update();
 
-        assertEquals(0, backstagePasses.quality);
+        assertEquals(0, updatedBackStagePass.quality);
     }
 }

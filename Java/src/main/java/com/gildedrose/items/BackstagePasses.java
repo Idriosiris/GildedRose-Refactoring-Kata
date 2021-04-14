@@ -25,6 +25,6 @@ public class BackstagePasses extends Item {
             quality = 0;
         }
 
-        return null;
+        return new BackstagePasses(sellIn, quality);
     }
 }
