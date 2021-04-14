@@ -65,41 +65,6 @@ class GildedRoseTest {
     }
 
     @Test
-    void agedBrieIncreasesInQuality() {
-        app = gildedRose(withItems(
-                new AgedBrie(10, 10)
-        ));
-
-        app.updateQuality();
-
-        assertEquals(11, app.items[0].quality);
-        assertEquals(9, app.items[0].sellIn);
-    }
-
-    @Test
-    void agedBrieDoublesInQualityWhenSellinDayPasses() {
-        app = gildedRose(withItems(
-                new AgedBrie(0, 10)
-        ));
-
-        app.updateQuality();
-
-        assertEquals(12, app.items[0].quality);
-        assertEquals(-1, app.items[0].sellIn);
-    }
-
-    @Test
-    void qualityOfAnItemIsNeverMoreThan50() {
-        app = gildedRose(withItems(
-                new AgedBrie(0, 50)
-        ));
-
-        app.updateQuality();
-
-        assertEquals(50, app.items[0].quality);
-    }
-
-    @Test
     void sulfurasNeverDecreasesInQuality() {
         app = gildedRose(withItems(
                 new Sulfuras(2, 10)
