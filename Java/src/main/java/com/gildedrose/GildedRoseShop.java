@@ -9,10 +9,12 @@ public class GildedRoseShop {
         this.items = items;
     }
 
-    public void update() {
+    public GildedRoseShop update() {
         for (Item item : items) {
             item.update();
         }
+
+        return new GildedRoseShop(items);
     }
 
     public Item getItemFromShelfPosition(int position) {

@@ -29,15 +29,15 @@ public class GildedRoseShopTest {
                 new BackstagePasses(5, 7))
         );
 
-        gildedRoseShop.update();
+        GildedRoseShop updatedGildedRoseShop = gildedRoseShop.update();
 
-        assertNotEquals(5 , gildedRoseShop.getItemFromShelfPosition(1).quality);
-        assertNotEquals(10, gildedRoseShop.getItemFromShelfPosition(2).quality);
-        assertNotEquals(5 , gildedRoseShop.getItemFromShelfPosition(3).quality);
+        assertNotEquals(5 , updatedGildedRoseShop.getItemFromShelfPosition(1).quality);
+        assertNotEquals(10, updatedGildedRoseShop.getItemFromShelfPosition(2).quality);
+        assertNotEquals(5 , updatedGildedRoseShop.getItemFromShelfPosition(3).quality);
 
-        assertNotEquals(21, gildedRoseShop.getItemFromShelfPosition(1).quality);
-        assertNotEquals(12, gildedRoseShop.getItemFromShelfPosition(2).quality);
-        assertNotEquals(7 , gildedRoseShop.getItemFromShelfPosition(3).quality);
+        assertNotEquals(21, updatedGildedRoseShop.getItemFromShelfPosition(1).quality);
+        assertNotEquals(12, updatedGildedRoseShop.getItemFromShelfPosition(2).quality);
+        assertNotEquals(7 , updatedGildedRoseShop.getItemFromShelfPosition(3).quality);
     }
 
 }
