@@ -14,18 +14,18 @@ public class AgedBrieTest {
 
         AgedBrie updatedAgedBrie = agedBrie.update();
 
-        assertEquals(11, updatedAgedBrie.quality);
-        assertEquals(9,  updatedAgedBrie.sellIn);
+        assertEquals(11, agedBrie.quality(updatedAgedBrie));
+        assertEquals(9 , agedBrie.sellIn(updatedAgedBrie));
     }
 
     @Test
-    void agedBrieDoublesInQualityWhenSellinDayPasses() {
+    void agedBrieDoublesInQualityWhenSellInDayPasses() {
         agedBrie = new AgedBrie(0, 10);
 
         AgedBrie updatedAgedBrie = agedBrie.update();
 
-        assertEquals(12, updatedAgedBrie.quality);
-        assertEquals(-1, updatedAgedBrie.sellIn);
+        assertEquals(12, agedBrie.quality(updatedAgedBrie));
+        assertEquals(-1, agedBrie.sellIn(updatedAgedBrie));
     }
 
     @Test
@@ -34,6 +34,6 @@ public class AgedBrieTest {
 
         AgedBrie updatedAgedBrie = agedBrie.update();
 
-        assertEquals(50, updatedAgedBrie.quality);
+        assertEquals(50, agedBrie.quality(updatedAgedBrie));
     }
 }

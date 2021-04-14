@@ -19,6 +19,14 @@ public abstract class Item {
         quality = quality + 1;
     }
 
+    public int quality(Item item) {
+        return item.quality;
+    }
+
+    public int sellIn(Item item) {
+        return item.sellIn;
+    }
+
     public abstract Item update();
 
     @Override
