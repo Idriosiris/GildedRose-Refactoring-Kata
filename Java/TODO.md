@@ -5,10 +5,10 @@
 - Remove duplication on the creation of GildedRose in tests 
   - Done due to splitting the tests more thinly. Duplication is less prevalent but might reoccur as more features add up)
 - SimpleItem logic should not be tested inside conjured item logic
+- Improve encapsulation of items[0] in the gilded rose logic
 
 #### TODO
 
-- Improve encapsulation of items[0] in the gilded rose logic
 - GildedRoseShop should not be stateful but rather a modified version of the GildedRoseShop should be returned every time.
 - Improve test and mutation coverage
 - Slight unknowns around Sulfuras
