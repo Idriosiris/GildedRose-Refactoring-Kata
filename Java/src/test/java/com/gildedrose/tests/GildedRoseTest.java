@@ -85,30 +85,4 @@ class GildedRoseTest {
 
         assertEquals(2, app.items[0].sellIn);
     }
-
-    @Test
-    void conjuredItemsDegradeTwiceAsFastAsSimpleItems() {
-        app = gildedRose(withItems(
-                new SimpleItem("Simple", 4, 10),
-                new Conjured(4, 10)
-        ));
-
-        app.updateQuality();
-
-        assertEquals(9, app.items[0].quality);
-        assertEquals(8, app.items[1].quality);
-    }
-
-    @Test
-    void conjuredItemsDegradeTwiceAsFastAsSimpleItemsAlsoWhenSellInIs0() {
-        app = gildedRose(withItems(
-                new SimpleItem("Simple", 0, 10),
-                new Conjured(0, 10)
-        ));
-
-        app.updateQuality();
-
-        assertEquals(8, app.items[0].quality);
-        assertEquals(6, app.items[1].quality);
-    }
 }
