@@ -1,8 +1,15 @@
 ###Gilded Rose To Do List
-1. Test GildedRose logic separately from the individual items logic 
-2. Improve encapsulation of items[0] in the gilded rose logic 
-3. Remove duplication on the creation of GildedRose in tests
-4. Slight unknowns around Sulfuras
-5. Improve assertions using matchers
-6. Improve data creation 
-7. SimpleItem logic should not be tested inside conjured item logic
+
+#### Done
+- Test GildedRose logic separately from the individual items logic
+- Improve encapsulation of items[0] in the gilded rose logic
+- Remove duplication on the creation of GildedRose in tests (done due 
+  to splitting the tests more tingly. Duplication is less prevalent but might 
+  reoccur as more features add up)
+
+#### TODO
+
+- Slight unknowns around Sulfuras
+- Improve assertions using matchers
+- Improve data creation 
+- SimpleItem logic should not be tested inside conjured item logic
