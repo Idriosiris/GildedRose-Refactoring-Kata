@@ -63,26 +63,4 @@ class GildedRoseTest {
         assertEquals(0, app.items[0].quality);
         assertEquals(-1, app.items[0].sellIn);
     }
-
-    @Test
-    void sulfurasNeverDecreasesInQuality() {
-        app = gildedRose(withItems(
-                new Sulfuras(2, 10)
-        ));
-
-        app.updateQuality();
-
-        assertEquals(10, app.items[0].quality);
-    }
-
-    @Test
-    void sulfurasSellinDayNeverDecreases() {
-        app = gildedRose(withItems(
-                new Sulfuras(2, 10)
-        ));
-
-        app.updateQuality();
-
-        assertEquals(2, app.items[0].sellIn);
-    }
 }
